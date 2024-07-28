@@ -1,0 +1,14 @@
+1.express
+2.body parser
+3.corse
+npm i nodemon
+Hello Connections!!
+
+I'm happy to share that I’ve completed my first task during my web development internship at OctaNet Services Pvt Ltd.
+
+ task1:-Landing Page
+
+This task has been instrumental in upgrading my skills and has provided me with invaluable insights into web page development.Also Looking forward to the upcoming challenges and opportunities to grow further.
+
+#OctaNetService  #Webdevelopment #internship #task-1 #Landingpage
+

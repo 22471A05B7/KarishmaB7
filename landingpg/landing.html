@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+  
+    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+    :root {
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --primary-color: #0652dd;
+  --secondary-color: #ea2027;
+  --line-height: 1.7rem;
+  --transition: 0.4s ease-in;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+ body {
+  font-family: "Roboto", sans-serf;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+    font-size: 15px;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: var(--secondary-color);
+} 
+.fist {
+    font-size: 60px;
+  color: var(--secondary-color);
+}
+
+.jab {
+    font-size: 60px;
+  color: var(--primary-color);
+  margin-left: 40px;
+}
+
+.tv {
+    font-size:60px;
+  color: var(--secondary-color);
+}
+nav {
+  background: #fff;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 3px 2px #f1f1f1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+}
+.hamburger {
+  display: none;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 500;
+  
+}
+
+ul {
+  display: flex;
+  
+  align-items: center;
+}
+
+.nav-item {
+   margin-top: 35px;
+  margin-left: 50px ;
+}
+
+.nav-link {
+font-size: 15px;
+}
+input.nosubmit {
+  border: 1px solid #555;
+  width: 400px;
+  margin-left: 300px;
+  padding: 9px 4px 9px 40px;
+   background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}.fis{
+    margin-left: 20px;
+    color: red;
+}
+img{
+    z-index: 1;
+}
+.background-container {
+            position: relative;
+            background-image: url('yes.webp');
+            background-size: cover;
+            background-position: center;
+            height: 550PX;
+            color: white;
+            text-align: center;
+            display: block;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+        .background-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+         /* Optional: for a darker overlay */
+            z-index: 1;
+        }
+        .background-container .ti{
+          font-size: 50px;
+          margin-right: 900px;
+          color: #555;
+          margin-bottom: 300px;
+        
+        }
+        .background-container .cta-button {
+    z-index: 2; 
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   
+      transition: background-color 0.3s ease;
+   
+}
+
+.background-container .cta-button:hover {
+    background-color: #0056b3;
+}
+.de{
+  font-size: 25px;
+}
+.in{
+  margin-top: 20px;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slider-wrapper {
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    width: calc(100% / 4 - 20px); /* Show 4 images per slide */
+    flex: 0 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slide-button.left {
+    left: 10px;
+}
+
+.slide-button.right {
+    right: 10px;
+}
+.container {
+        margin-top: 100px;
+            display: flex;
+            align-items: center;
+        }
+        .container img {
+            max-width: 50%; 
+            height: auto;
+        }
+        .container .text {
+            margin-left: 20px; 
+        }
+</style>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+
+    <title>JabTV Landing Page</title>
+  </head>
+  <body>
+
+    <nav>
+        <a href="#" class="logo">
+          <p>
+            <span class="jab">PHOTO</span><span class="tv">GRAPHY</span
+            ><span class="fist">	&#x1f4f7;</span>
+            <input class="nosubmit" type="search" placeholder="Search...">
+            <span class="fis">&#x2665</span>
+            <span class="fis">&#119573</span>
+            <span class="fis">&#x231B</span>
+            </p>
+        </a>
+       
+  <ul>
+    <li class="nav-item">
+      <a href="#about" class="nav-link" id="nav-link">Acrylic</a>
+    </li>
+    <li class="nav-item">
+      <a href="#stars" class="nav-link" id="nav-link">Canvas</a>
+    </li>
+    <li class="nav-item">
+      <a href="#stakeholders" class="nav-link" id="nav-link"
+        >Metal</a
+      >
+    </li>
+    <li class="nav-item">
+        <a href="#stars" class="nav-link" id="nav-link">Puzzles</a>
+      </li>
+      <li class="nav-item">
+        <a href="#stars" class="nav-link" id="nav-link">Panwood</a>
+      </li>
+    <li class="nav-item">
+      <a href="#sub" class="nav-link" id="nav-link">Glass</a>
+    </li>
+</ul>
+</nav>
+  
+    <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    
+    <div class="background-container">
+      <P class="ti"><span class="in">Turning Memories into Custom Wall Art</span><br>
+      <span class="de">Explore our diverse collection for photo prints on materials like acrylic, glass, metal, puzzles, and canvas, perfect for adding a touch of modern décor to your home.</span>
+      <button class="cta-button">Learn More</button></P>
+      
+      
+      
+  </div>
+  <p style="font-size: 40px; margin-top: 20px; margin-left: 20px;">Photo Wall Prints</p>
+  <div class="slider-container">
+    <button class="slide-button left" onclick="slide(-1)">&#10094;</button>
+    <div class="slider-wrapper">
+        <div class="slider">
+            <div class="card">
+                <img src="fem.jpeg" alt="Image 1">
+            </div>
+            <div class="card">
+                <img src="wood.jpeg" alt="Image 2">
+            </div>
+            <div class="card">
+                <img src="can.jpeg" alt="Image 3">
+            </div>
+            <div class="card">
+                <img src="acr.jpeg" alt="Image 4">
+            </div>
+            <div class="card">
+                <img src="glass.jpeg" alt="Image 5">
+            </div>
+            <div class="card">
+                <img src="cat.jpeg" alt="Image 6">
+            </div>
+            <div class="card">
+                <img src="cust.jpeg" alt="Image 7">
+            </div>
+            <div class="card">
+                <img src="glass.jpeg" alt="Image 8">
+            </div>
+        </div>
+    </div>
+    <button class="slide-button right" onclick="slide(1)">&#10095;</button>
+</div>
+<div class="container">
+  <img src="den.webp" alt="Description of image">
+  <div class="text">
+      <h1 style="margin-bottom: 50px;">Choose from a Variety of Sizes to Match Your Space</h1>
+      <p>Unleash the potential of your personalized gallery wall with our expansive selection of print sizes. Each size is meticulously tailored to complement our premium materials, ensuring your space is as unique as your vision.</p>
+  </div>
+</div>
+ 
+    <script src="assets/js/app.js"></script>
+
+    
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script src="assets/js/simple-lightbox.min.js"></script>
+    <script>
+    
+    </script>
+    <script>
+let currentIndex = 0;
+
+function slide(direction) {
+    const slider = document.querySelector('.slider');
+    const cards = document.querySelectorAll('.card');
+    const cardWidth = cards[0].offsetWidth + 20; 
+    const visibleCards = 4; 
+    const totalCards = cards.length;
+    const maxIndex = Math.ceil(totalCards / visibleCards) - 1;
+
+    currentIndex += direction;
+
+  
+    if (currentIndex < 0) {
+        currentIndex = 0;
+    } else if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
+    }
+
+    const translateX = -currentIndex * cardWidth * visibleCards;
+    slider.style.transform = `translateX(${translateX}px)`;
+}
+
+
+    </script>
+  </body>
+</html>
