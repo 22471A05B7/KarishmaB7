@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    tools:openDrawer="start">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="50dp"
+            android:visibility="visible" />
+    </ScrollView>
+    <!-- Toolbar with Image Background and Text Overlay -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <!-- Image Background for Toolbar -->
+        <ImageView
+            android:id="@+id/toolbar_background"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mech" />
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <!-- Title text on top of the image -->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here we are providing "
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Online Mechanic services "
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="120dp"
+            android:textColor="@color/white"/>
+
+        <!-- Subtitle text below the title -->
+    </RelativeLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            android:fontFamily="sans-serif-medium"
+            android:text="Hello! Choose the Vehicle Service"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_marginTop="250dp"/>
+
+    </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:src="@drawable/car"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/img1"
+        android:layout_row="0"
+        android:layout_column="1"/>
+
+        <TextView
+            android:id="@+id/wedi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="440dp"
+            android:text="Car Service"
+            android:textSize="19dp" />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:src="@drawable/bike"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="50dp"
+        android:layout_row="0"
+        android:id="@+id/img2"
+        android:layout_column="2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="440dp"
+            android:text="Bike Service"
+            android:textSize="19dp" />
+
+        <ImageView
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:src="@drawable/bus"
+            android:id="@+id/img3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_row="1"
+        android:layout_column="1"/>
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="160dp"
+            android:text="Bus Service"
+            android:textSize="19dp" />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:src="@drawable/tractor"
+        android:layout_marginTop="20dp"
+        android:id="@+id/img4"
+        android:layout_marginLeft="50dp"
+        android:layout_row="1"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="160dp"
+            android:text="Tractor Service"
+            android:textSize="19dp" />
+        </GridLayout>
+</RelativeLayout>
+    <!-- NavigationView -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/main_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
+
